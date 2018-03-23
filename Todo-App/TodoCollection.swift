@@ -9,5 +9,13 @@
 import UIKit
 
 class TodoCollection: NSObject {
-
+    var todos:[Todo] = []
+    
+    func fetchTodos() {
+        for i in 0..<7{
+            let todo = Todo()
+            todo.title = "Todo\(i + 1)"
+            self.todos.append(todo)
+        }
+    }
 }
