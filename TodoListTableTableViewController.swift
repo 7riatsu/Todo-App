@@ -9,9 +9,13 @@
 import UIKit
 
 class TodoListTableTableViewController: UITableViewController {
+    let todoCollection = TodoCollection()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.todoCollection.fetchTodos()
+        print(self.todoCollection.todos)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -34,14 +38,16 @@ class TodoListTableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 7
+        return self.todoCollection.todos.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        cell.textLabel!.text = "セクション\(indexPath.section)の\(indexPath.row)行目"
+        
+        let todo = self.todoCollection.todos[indexPath.row]
+        cell.textLabel!.text = todo.title
+        cell.textLabel!.font = UIFont(name: "HirakakuProN-W3", size: 15)
 
         return cell
     }

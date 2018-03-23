@@ -33,10 +33,32 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="ToDo一覧" id="aFQ-XB-NlC"/>
+                    <connections>
+                        <segue destination="J1B-al-38l" kind="presentation" id="H0Z-bU-Bi8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6M-TU-6zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="864.79999999999995" y="201.94902548725639"/>
+        </scene>
+        <!--新規Todo作成-->
+        <scene sceneID="5v0-Fr-NOc">
+            <objects>
+                <viewController id="kOA-0b-7tl" customClass="NewTodoViewController" customModule="Todo_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hDO-qJ-zMv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pmp-uI-2yc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ef-Vg-7qu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="新規Todo作成" id="6jo-ci-K5K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7yu-l3-eRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2536.8000000000002" y="201.94902548725639"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5vh-En-hKr">
@@ -56,6 +78,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Uz-q8-TOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-74.400000000000006" y="201.94902548725639"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lAm-KG-XyS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J1B-al-38l" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FPi-s5-wRO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.74117647058823533" green="0.20392156862745098" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kOA-0b-7tl" kind="relationship" relationship="rootViewController" id="A13-Zn-kxU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zc-dE-MSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1597.5999999999999" y="201.94902548725639"/>
         </scene>
     </scenes>
 </document>
