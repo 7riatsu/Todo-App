@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7C62614A20644D55000F2DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62614920644D55000F2DB1 /* AppDelegate.swift */; };
-		7C62614C20644D55000F2DB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C62614B20644D55000F2DB1 /* ViewController.swift */; };
 		7C62614F20644D55000F2DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C62614D20644D55000F2DB1 /* Main.storyboard */; };
 		7C62615220644D55000F2DB1 /* Todo_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C62615020644D55000F2DB1 /* Todo_App.xcdatamodeld */; };
 		7C62615420644D55000F2DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C62615320644D55000F2DB1 /* Assets.xcassets */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		7C62614620644D55000F2DB1 /* Todo-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C62614920644D55000F2DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C62614B20644D55000F2DB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7C62614E20644D55000F2DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C62615120644D55000F2DB1 /* Todo_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todo_App.xcdatamodel; sourceTree = "<group>"; };
 		7C62615320644D55000F2DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				7C62614920644D55000F2DB1 /* AppDelegate.swift */,
-				7C62614B20644D55000F2DB1 /* ViewController.swift */,
 				7C62614D20644D55000F2DB1 /* Main.storyboard */,
 				7C62615320644D55000F2DB1 /* Assets.xcassets */,
 				7C62615520644D55000F2DB1 /* LaunchScreen.storyboard */,
@@ -262,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C62614C20644D55000F2DB1 /* ViewController.swift in Sources */,
 				7C62614A20644D55000F2DB1 /* AppDelegate.swift in Sources */,
 				7C62615220644D55000F2DB1 /* Todo_App.xcdatamodeld in Sources */,
 			);
@@ -511,6 +507,7 @@
 				7C62617320644D55000F2DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C62617420644D55000F2DB1 /* Build configuration list for PBXNativeTarget "Todo-AppTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +516,7 @@
 				7C62617620644D55000F2DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C62617720644D55000F2DB1 /* Build configuration list for PBXNativeTarget "Todo-AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +525,7 @@
 				7C62617920644D55000F2DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
