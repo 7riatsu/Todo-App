@@ -1,5 +1,5 @@
 //
-//  Todo.swift
+//  TodoCollection.swift
 //  Todo-App
 //
 //  Created by 成田篤基 on 2018/03/23.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Todo: NSObject {
-    var title = ""
+class TodoCollection: NSObject {
+
 }
