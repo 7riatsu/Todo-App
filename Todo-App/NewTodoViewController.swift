@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewTodoViewController: UIViewController {
+class NewTodoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var todoField: UITextField!
     @IBOutlet weak var descriptionView: UITextView!
     @IBOutlet weak var prioritySegment: UISegmentedControl!
@@ -22,6 +22,7 @@ class NewTodoViewController: UIViewController {
         descriptionView.layer.borderWidth = 1
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewTodoViewController.tapGesture(_:)))
         self.view.addGestureRecognizer(tapRecognizer)
+        todoField.delegate = self
     }
     
     @objc func tapGesture(_ sender: UITapGestureRecognizer){
@@ -57,6 +58,11 @@ class NewTodoViewController: UIViewController {
     
     @objc func save(){
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        todoField.resignFirstResponder()
+        return true
     }
     
 
