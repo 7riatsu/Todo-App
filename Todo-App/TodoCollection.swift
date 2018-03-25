@@ -22,5 +22,26 @@ class TodoCollection: NSObject {
     
     func addTodoCollection(todo: Todo){
         self.todos.append(todo)
+        self.save()
+    }
+    
+    func save (){
+        var todoList: Array<Dictionary<String, AnyObject>> = []
+        for todo in todos {
+            let todoDic = TodoCollection.convertDictionary(todo: todo)
+            todoList.append(todoDic)
+        }
+        let defaults = UserDefaults.standard
+        defaults.set(todoList, forKey: "todoLists")
+        defaults.synchronize()
+        
+    }
+    
+    class func convertDictionary(todo: Todo) -> Dictionary<String, AnyObject> {
+        var dic = Dictionary<String, AnyObject>()
+        dic["title"] = todo.title as AnyObject
+        dic["descript"] = todo.descript as AnyObject
+        dic["priority"] = todo.priority.rawValue as AnyObject
+        return dic
     }
 }
