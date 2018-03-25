@@ -57,7 +57,18 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func save(){
-        self.dismiss(animated: true, completion: nil)
+        if todoField.text!.isEmpty{
+            let alertView = UIAlertController(title: "エラー", message: "Todoが記述されていません", preferredStyle: UIAlertControllerStyle.alert)
+            alertView.addAction(UIAlertAction(title: "はい", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertView, animated: true, completion: nil)
+        } else {
+            let todo = Todo()
+            todo.title = todoField.text!
+            todo.descript = descriptionView.text
+            todo.priority = TodoPriority(rawValue: prioritySegment.selectedSegmentIndex)!
+            self.dismiss(animated: true, completion: nil)
+        }
+
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
