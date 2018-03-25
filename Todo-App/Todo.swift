@@ -18,4 +18,15 @@ enum TodoPriority: Int {
     case Low = 0
     case Middle = 1
     case High = 2
+    
+    func color() -> UIColor {
+        switch self {
+        case .Low:
+            return UIColor.yellow
+        case .Middle:
+            return UIColor.green
+        case .High:
+            return UIColor.red
+    }
+}
 }

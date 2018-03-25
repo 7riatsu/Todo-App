@@ -64,6 +64,10 @@ class TodoListTableViewController: UITableViewController {
         cell.textLabel!.text = todo.title
         cell.detailTextLabel!.text = todo.descript
         cell.textLabel!.font = UIFont(name: "HirakakuProN-W3", size: 15)
+        let priorityIcon = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: 12))
+        priorityIcon.layer.cornerRadius = 6
+        priorityIcon.backgroundColor = todo.priority.color()
+        cell.accessoryView = priorityIcon
 
         return cell
     }
