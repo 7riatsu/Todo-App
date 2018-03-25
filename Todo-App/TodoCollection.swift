@@ -9,6 +9,7 @@
 import UIKit
 
 class TodoCollection: NSObject {
+    static let sharedInstance = TodoCollection()
     var todos:[Todo] = []
     
     func fetchTodos() {
@@ -17,5 +18,9 @@ class TodoCollection: NSObject {
             todo.title = "Todo\(i + 1)"
             self.todos.append(todo)
         }
+    }
+    
+    func addTodoCollection(todo: Todo){
+        self.todos.append(todo)
     }
 }
