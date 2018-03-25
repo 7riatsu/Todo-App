@@ -14,6 +14,8 @@ class TodoListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        todoCollection.fetchTodos()
+        
         print(self.todoCollection.todos)
 
         // Uncomment the following line to preserve selection between presentations

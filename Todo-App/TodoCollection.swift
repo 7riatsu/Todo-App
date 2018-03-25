@@ -13,10 +13,12 @@ class TodoCollection: NSObject {
     var todos:[Todo] = []
     
     func fetchTodos() {
-        for i in 0..<7{
-            let todo = Todo()
-            todo.title = "Todo\(i + 1)"
-            self.todos.append(todo)
+        let defaults = UserDefaults.standard
+        if let todoList = defaults.object(forKey: "todoLists") as? Array<Dictionary<String, AnyObject>> {
+            for todoDic in todoList {
+                let todo = TodoCollection.convertTodoModel(attiributes: todoDic)
+                self.todos.append(todo)
+            }
         }
     }
     
@@ -35,6 +37,16 @@ class TodoCollection: NSObject {
         defaults.set(todoList, forKey: "todoLists")
         defaults.synchronize()
         
+    }
+    
+
+    
+    class func convertTodoModel(attiributes: Dictionary<String, AnyObject>) -> Todo {
+        let todo = Todo()
+        todo.title = attiributes["title"] as! String
+        todo.descript = attiributes["descript"] as! String
+        todo.priority = TodoPriority(rawValue: attiributes["priority"] as! Int)!
+        return todo
     }
     
     class func convertDictionary(todo: Todo) -> Dictionary<String, AnyObject> {
