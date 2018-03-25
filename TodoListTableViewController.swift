@@ -82,24 +82,27 @@ class TodoListTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
+
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        switch editingStyle {
+        case .delete:
+            self.todoCollection.todos.remove(at: indexPath.row)
+            self.todoCollection.save()
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.middle)
+        default:
+            return
+        }
     }
-    */
 
-    /*
+
     // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let todo = self.todoCollection.todos[sourceIndexPath.row]
+        self.todoCollection.todos.remove(at: sourceIndexPath.row)
+        self.todoCollection.todos.insert(todo, at: destinationIndexPath.row)
+        self.todoCollection.save()
     }
-    */
+
 
     /*
     // Override to support conditional rearranging of the table view.
