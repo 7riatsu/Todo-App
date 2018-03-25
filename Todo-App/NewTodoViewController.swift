@@ -20,6 +20,13 @@ class NewTodoViewController: UIViewController {
         descriptionView.layer.cornerRadius = 5
         descriptionView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1).cgColor
         descriptionView.layer.borderWidth = 1
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(NewTodoViewController.tapGesture(_:)))
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    @objc func tapGesture(_ sender: UITapGestureRecognizer){
+        todoField.resignFirstResponder()
+        descriptionView.resignFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
