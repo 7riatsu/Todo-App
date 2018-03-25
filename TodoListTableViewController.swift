@@ -37,6 +37,7 @@ class TodoListTableViewController: UITableViewController {
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         self.navigationController!.navigationBar.tintColor = UIColor.white
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "新規作成", style: UIBarButtonItemStyle.plain, target: self, action: #selector(TodoListTableViewController.newTodo))
+        self.navigationItem.leftBarButtonItem = editButtonItem
         self.tableView.reloadData()
     }
     
