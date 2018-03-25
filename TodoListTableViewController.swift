@@ -57,10 +57,11 @@ class TodoListTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "reuseIdentifier")
         
         let todo = self.todoCollection.todos[indexPath.row]
         cell.textLabel!.text = todo.title
+        cell.detailTextLabel!.text = todo.descript
         cell.textLabel!.font = UIFont(name: "HirakakuProN-W3", size: 15)
 
         return cell
