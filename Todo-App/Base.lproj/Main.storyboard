@@ -136,9 +136,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="新規Todo作成" id="6jo-ci-K5K"/>
                     <connections>
-                        <outlet property="discriptionView" destination="kte-qP-DIH" id="uez-ko-Qlu"/>
-                        <outlet property="prioritySegment" destination="oJu-Xo-fQu" id="fpH-jp-ddH"/>
-                        <outlet property="todoField" destination="z5f-zG-4ok" id="FZW-IS-t7u"/>
+                        <outlet property="descriptionView" destination="kte-qP-DIH" id="RQ6-ce-ddp"/>
+                        <outlet property="prioritySegment" destination="oJu-Xo-fQu" id="Yu7-QY-AA4"/>
+                        <outlet property="todoField" destination="z5f-zG-4ok" id="sZZ-qi-LNi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7yu-l3-eRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

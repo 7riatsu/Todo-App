@@ -10,13 +10,16 @@ import UIKit
 
 class NewTodoViewController: UIViewController {
     @IBOutlet weak var todoField: UITextField!
-    @IBOutlet weak var discriptionView: UITextView!
+    @IBOutlet weak var descriptionView: UITextView!
     @IBOutlet weak var prioritySegment: UISegmentedControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        descriptionView.layer.cornerRadius = 5
+        descriptionView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1).cgColor
+        descriptionView.layer.borderWidth = 1
     }
 
     override func didReceiveMemoryWarning() {
