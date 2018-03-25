@@ -9,16 +9,44 @@
 import UIKit
 
 class NewTodoViewController: UIViewController {
-
+    @IBOutlet weak var todoField: UITextField!
+    @IBOutlet weak var discriptionView: UITextView!
+    @IBOutlet weak var prioritySegment: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController!.navigationBar.tintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "閉じる",
+            style: UIBarButtonItemStyle.plain,
+            target: self,
+            action: #selector(NewTodoViewController.close)
+        )
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "保存",
+            style: UIBarButtonItemStyle.plain,
+            target: self,
+            action: #selector(NewTodoViewController.save)
+        )
+    }
+    
+    @objc func close(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func save(){
+        self.dismiss(animated: true, completion: nil)
     }
     
 

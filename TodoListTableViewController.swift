@@ -1,5 +1,5 @@
 //
-//  TodoListTableTableViewController.swift
+//  TodoListTableViewController.swift
 //  Todo-App
 //
 //  Created by 成田篤基 on 2018/03/23.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TodoListTableTableViewController: UITableViewController {
+class TodoListTableViewController: UITableViewController {
     let todoCollection = TodoCollection()
 
     override func viewDidLoad() {
@@ -31,10 +31,16 @@ class TodoListTableTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("aaaaa")
+        
         self.navigationController!.navigationBar.tintColor = UIColor.black
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "新規作成", style: UIBarButtonItemStyle.plain, target: self, #selector(TodoListTableTableViewController))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "新規作成", style: UIBarButtonItemStyle.plain, target: self, action: #selector(TodoListTableViewController.newTodo))
     }
-
+    
+    @objc func newTodo(){
+        self.performSegue(withIdentifier: "PresentNewTodoViewController", sender: self)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

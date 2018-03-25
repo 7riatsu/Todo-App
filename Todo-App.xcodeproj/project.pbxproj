@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C1D03F52064F3C500E08E65 /* TodoListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D03F42064F3C500E08E65 /* TodoListTableTableViewController.swift */; };
+		7C1D03F52064F3C500E08E65 /* TodoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D03F42064F3C500E08E65 /* TodoListTableViewController.swift */; };
 		7C1D03FB2065021500E08E65 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D03FA2065021500E08E65 /* Todo.swift */; };
 		7C1D03FD2065044600E08E65 /* TodoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D03FC2065044600E08E65 /* TodoCollection.swift */; };
 		7C1D03FF2065171C00E08E65 /* NewTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D03FE2065171C00E08E65 /* NewTodoViewController.swift */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7C1D03F42064F3C500E08E65 /* TodoListTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoListTableTableViewController.swift; path = ../TodoListTableTableViewController.swift; sourceTree = "<group>"; };
+		7C1D03F42064F3C500E08E65 /* TodoListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoListTableViewController.swift; path = ../TodoListTableViewController.swift; sourceTree = "<group>"; };
 		7C1D03FA2065021500E08E65 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		7C1D03FC2065044600E08E65 /* TodoCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoCollection.swift; sourceTree = "<group>"; };
 		7C1D03FE2065171C00E08E65 /* NewTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTodoViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		7C1D03F92065011E00E08E65 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7C1D03F42064F3C500E08E65 /* TodoListTableTableViewController.swift */,
+				7C1D03F42064F3C500E08E65 /* TodoListTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -306,7 +306,7 @@
 				7C1D03FD2065044600E08E65 /* TodoCollection.swift in Sources */,
 				7C1D03FF2065171C00E08E65 /* NewTodoViewController.swift in Sources */,
 				7C62614A20644D55000F2DB1 /* AppDelegate.swift in Sources */,
-				7C1D03F52064F3C500E08E65 /* TodoListTableTableViewController.swift in Sources */,
+				7C1D03F52064F3C500E08E65 /* TodoListTableViewController.swift in Sources */,
 				7C62615220644D55000F2DB1 /* Todo_App.xcdatamodeld in Sources */,
 				7C1D03FB2065021500E08E65 /* Todo.swift in Sources */,
 			);
